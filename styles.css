@@ -1,0 +1,113 @@
+:root {
+  --blue: #0b2474;
+  --blue-dark: #07184f;
+  --gold: #d9ad2b;
+  --gold-light: #f4df9a;
+  --cream: #fffaf0;
+  --white: #ffffff;
+  --text: #1d2433;
+  --muted: #667085;
+  --shadow: 0 18px 50px rgba(9, 25, 77, 0.12);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: "Inter", sans-serif; color: var(--text); background: var(--white); line-height: 1.7; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+.container { width: min(1120px, calc(100% - 2rem)); margin: 0 auto; }
+
+.site-header { background: var(--white); }
+.navbar { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; font-weight: 700; color: var(--blue-dark); }
+.brand img { width: 58px; height: 58px; object-fit: contain; }
+.nav-links { display: flex; gap: 1.15rem; align-items: center; }
+.nav-links a { text-decoration: none; font-size: .92rem; font-weight: 600; color: #28334f; }
+.nav-links a:hover { color: var(--gold); }
+.menu-toggle { display: none; border: 0; background: transparent; font-size: 1.6rem; color: var(--blue); cursor: pointer; }
+
+.hero { position: relative; overflow: hidden; background: linear-gradient(135deg, var(--blue-dark), var(--blue)); color: var(--white); }
+.hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(circle at 85% 30%, rgba(217,173,43,.27), transparent 35%), radial-gradient(circle at 10% 90%, rgba(255,255,255,.08), transparent 35%); }
+.hero-content { position: relative; min-height: 670px; display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 4rem; padding: 5rem 0; }
+.eyebrow, .section-kicker { text-transform: uppercase; letter-spacing: .18em; font-size: .78rem; font-weight: 700; color: var(--gold); }
+h1, h2, h3 { font-family: "Cormorant Garamond", serif; margin-top: 0; line-height: 1.08; }
+h1 { font-size: clamp(3rem, 6vw, 5.7rem); margin-bottom: 1.2rem; }
+h2 { font-size: clamp(2.3rem, 4vw, 3.7rem); color: var(--blue-dark); margin-bottom: 1rem; }
+h3 { font-size: 1.75rem; color: var(--blue-dark); margin-bottom: .5rem; }
+.hero-text { max-width: 680px; font-size: 1.1rem; color: rgba(255,255,255,.84); }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 2rem; }
+.btn { display: inline-flex; justify-content: center; align-items: center; min-height: 50px; padding: .75rem 1.25rem; border-radius: 999px; border: 0; text-decoration: none; font-weight: 700; cursor: pointer; }
+.btn-primary { background: var(--gold); color: #201800; }
+.btn-primary:hover { background: #e8c04d; transform: translateY(-1px); }
+.btn-secondary { border: 1px solid rgba(255,255,255,.55); color: var(--white); }
+.hero-logo-card { background: rgba(255,255,255,.96); border-radius: 30px; padding: 1.4rem; box-shadow: var(--shadow); transform: rotate(1.5deg); }
+.hero-logo-card img { border-radius: 18px; }
+
+.section { padding: 6rem 0; }
+.two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.lead { font-size: 1.18rem; color: #303b56; }
+.muted { color: var(--muted); }
+.mission-card { background: var(--cream); border: 1px solid #f0e3ba; border-radius: 24px; padding: 2.3rem; box-shadow: var(--shadow); }
+.vision-line { height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 1.8rem 0; }
+
+.pastor-section { background: #f7f8fb; }
+.pastor-feature { display: grid; grid-template-columns: minmax(320px, .9fr) minmax(0, 1.1fr); gap: 4rem; align-items: start; }
+.pastor-image-wrap { position: sticky; top: 110px; }
+.pastor-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: 28px; box-shadow: var(--shadow); border: 6px solid var(--white); }
+.pastor-copy p { margin: 0 0 1.15rem; }
+.pastor-copy blockquote { margin: 1.5rem 0; padding: 1.25rem 1.5rem; border-left: 4px solid var(--gold); background: var(--white); color: var(--blue-dark); font-family: "Cormorant Garamond", serif; font-size: 1.55rem; line-height: 1.35; border-radius: 0 16px 16px 0; box-shadow: 0 10px 30px rgba(9, 25, 77, 0.07); }
+.pastor-vision { color: var(--blue-dark); font-family: "Cormorant Garamond", serif; font-size: 1.5rem; }
+
+.center { text-align: center; }
+.card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.3rem; margin-top: 2.5rem; }
+.ministry-card { padding: 2rem 1.4rem; border-radius: 22px; background: var(--white); box-shadow: var(--shadow); border-top: 4px solid var(--gold); }
+.icon { width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center; background: var(--cream); margin-bottom: 1rem; font-size: 1.5rem; }
+.section-note { text-align: center; margin-top: 2rem; color: var(--muted); }
+
+.events { background: var(--blue-dark); color: var(--white); }
+.events h2 { color: var(--white); }
+.event-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 2rem; background: var(--white); color: var(--text); border-radius: 24px; padding: 2rem; margin-top: 2.5rem; }
+.event-date { min-width: 120px; text-align: center; padding: 1rem; border-radius: 18px; background: var(--cream); color: var(--blue); }
+.event-date span, .event-date strong { display: block; }
+.event-date strong { font-family: "Cormorant Garamond", serif; font-size: 2rem; }
+
+.prayer { background: #fffaf0; }
+.contact-form { background: var(--white); border-radius: 24px; padding: 2rem; box-shadow: var(--shadow); display: grid; gap: .75rem; }
+.contact-form label { font-weight: 700; color: var(--blue-dark); }
+.contact-form input, .contact-form textarea { width: 100%; border: 1px solid #d8deea; border-radius: 12px; padding: .9rem 1rem; font: inherit; }
+.contact-form input:focus, .contact-form textarea:focus { outline: 3px solid rgba(217,173,43,.22); border-color: var(--gold); }
+
+.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.3rem; margin-top: 2.5rem; }
+.contact-card { text-decoration: none; min-height: 180px; padding: 2rem; border-radius: 22px; background: #f7f8fb; display: flex; flex-direction: column; justify-content: center; border: 1px solid #e7eaf0; }
+.contact-card span { color: var(--gold); text-transform: uppercase; letter-spacing: .12em; font-size: .75rem; font-weight: 800; }
+.contact-card strong { margin-top: .4rem; font-size: 1.05rem; color: var(--blue-dark); overflow-wrap: anywhere; }
+.contact-card small { color: var(--muted); margin-top: .4rem; }
+
+.site-footer { background: #050d29; color: rgba(255,255,255,.78); padding: 2.2rem 0; }
+.footer-content { display: flex; justify-content: space-between; gap: 2rem; align-items: center; }
+.footer-content strong { color: var(--white); }
+.footer-content p { margin: .25rem 0; }
+
+@media (max-width: 900px) {
+  .menu-toggle { display: block; }
+  .nav-links { display: none; position: absolute; z-index: 20; top: 84px; left: 1rem; right: 1rem; flex-direction: column; align-items: stretch; background: var(--white); padding: 1rem; border-radius: 18px; box-shadow: var(--shadow); }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: .65rem .75rem; }
+  .hero-content, .two-column, .pastor-feature { grid-template-columns: 1fr; }
+  .pastor-image-wrap { position: static; max-width: 620px; }
+  .hero-content { gap: 2rem; }
+  .hero-logo-card { max-width: 520px; }
+  .card-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-grid { grid-template-columns: 1fr; }
+  .event-card { grid-template-columns: 1fr; }
+  .footer-content { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 560px) {
+  .brand span { display: none; }
+  .hero-content { padding: 4rem 0; min-height: auto; }
+  .section { padding: 4.5rem 0; }
+  .card-grid { grid-template-columns: 1fr; }
+  .hero-actions .btn { width: 100%; }
+  .pastor-photo { aspect-ratio: 4 / 5; }
+}
