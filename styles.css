@@ -34,3 +34,8 @@
   .giving-options{grid-template-columns:1fr}
   .payment-option{padding:1.35rem}
 }
+
+/* Weekly worship service card */
+.weekly-service-content{display:block;margin-top:.55rem;padding-left:3.9rem}
+.weekly-service-content .event-location{margin-top:0}
+@media(max-width:560px){.weekly-service-content{padding-left:0}}
